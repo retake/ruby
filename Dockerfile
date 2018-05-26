@@ -8,6 +8,10 @@ RUN apt-get install locales -y
 RUN echo "ja_JP UTF-8" > /etc/locale.gen
 RUN locale-gen
 
+ENV LANG ja_JP.UTF-8
+ENV LANGUAGE ja_JP.UTF-8
+ENV LC_ALL ja_JP.UTF-8
+
 ARG rubycritic_version=3.4.0
 RUN gem install -N rubycritic -v ${rubycritic_version}
 
