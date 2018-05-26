@@ -1,2 +1,2 @@
-# ruby
-rubycritiを実行するイメージ
+# rubycritc_image
+rubycriticを実行するイメージ
