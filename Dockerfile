@@ -2,6 +2,12 @@ FROM ruby:2.3
 
 MAINTAINER "Matsuura Keita<retake272@gmail.com>"
 
+# locale
+RUN apt-get update
+RUN apt-get install locales -y
+RUN echo "ja_JP UTF-8" > /etc/locale.gen
+RUN locale-gen
+
 ARG rubycritic_version=3.4.0
 RUN gem install -N rubycritic -v ${rubycritic_version}
 
